@@ -3,7 +3,7 @@ applications:
 - name: pcfdemo
   memory: 512M
   instances: 1
-  services: [myrabbi]
+  services: [myrabbit]
   host: pcfdemo-${random-word}
   path: ./target/pcfdemo.war
   env:
