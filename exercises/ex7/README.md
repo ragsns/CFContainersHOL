@@ -26,4 +26,4 @@ If you wander over to paper trail on your browser and click on Dashboard you sho
 
 ### Summary
 
-We aw how to consolidating logs using the syslog format.
+We saw how to consolidating logs using the syslog format.
