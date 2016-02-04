@@ -43,7 +43,9 @@ It is recommended that you run through these exercises sequentially since they a
 
 Plenty of samples in multiple languages at [https://github.com/cloudfoundry-samples] (https://github.com/cloudfoundry-samples)
 
-More samples at [https://github.com/Stackato-Apps] (https://github.com/Stackato-Apps)
+IBM Containers documentation at [https://www.ng.bluemix.net/docs/containers/container_index.html] (https://www.ng.bluemix.net/docs/containers/container_index.html)
+
+IBM Containers CLI documentation at [https://www.ng.bluemix.net/docs/containers/container_cli_reference_cfic.html](https://www.ng.bluemix.net/docs/containers/container_cli_reference_cfic.html)
 
 ##Contact
 
