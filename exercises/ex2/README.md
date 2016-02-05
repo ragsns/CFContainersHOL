@@ -12,7 +12,7 @@ If you do not have the `git` command line tool, you can just click on the button
 Next, ensure that you are in sub-directory `ex2`.
 
 ```
-cd <path-to-folder>/CFContainersHOL/ex2
+cd <path-to-folder>/CFContainersHOL/exercises/ex2
 ```
 
 We will use the Pivotal Cloud Foundry field engineering [demo](https://github.com/Pivotal-Field-Engineering/PCF-demo).
@@ -115,7 +115,7 @@ cf logs pcfdemo --recent
 You can delete the application with the following command, which will not prompt you and also delete all associated routes.
 
 ```
-cf delete --f pcfdemo
+cf delete -f pcfdemo
 ```
 
 and verify that it is deleted as below.

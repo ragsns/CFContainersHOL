@@ -173,12 +173,12 @@ You can run most Docker commands by following it with `cf ic`. For example,
 cf ic ps -a
 ```
 
-Which will list all the instances.
+Which will list your running Docker containers.
 
 We will export the namespace into an environment variable that we will subsequently use in other exercises following.
 
 ```
-CONTAINER_NAMESPACE = $(cf is namespace get)
+CONTAINER_NAMESPACE=$(cf ic namespace get)
 ```
 
 ***Note: If you are running on Windows, you may need to carefully look at subseqent commands and substitute the environment variable `CONTAINER_NAMESPACE` in each command manually***
