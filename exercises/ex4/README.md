@@ -15,6 +15,7 @@ In principle, they comprise of the following steps.
 - Pick a service via the Marketplace
 - Create the service
 - Bind the application to the service (or connect to the service by an explicit binding in manifest.yml)
+- Restage the application if required
 
 We started the application previously without connecting to a service. We will now connect to a service.
 
@@ -180,7 +181,7 @@ name                               service                                      
 myrabbit                           cloudamqp                                                  lemur                                                      create succeeded
 ```
 
-Next, we bind the service to the application using the following command. If necessary, restage the application.
+Next, we bind the service to the application using the following command.
 
 Notice the `manifest.yml` in this directory which looks like below. It has been updated to bind to the service that has just been created. You can bind to more services if you want.
 
@@ -209,12 +210,13 @@ Notice in the output below (partially reproduced) the following line which shows
 Binding service myrabbit to app pcfdemo in org raghsrin@us.ibm.com / space dev as raghsrin@us.ibm.com...
 ```
 
-Let's go ahead and delete the app.
+Let's unbind the service as below.
 
 ```
-cf delete pcfdemo
+cf unbind-service pcfdemo rabbitmq
 ```
-We could have also bound the service by following the steps below.
+
+We could have also bound the service manually by following the steps below.
 
 ```
 cf bind-service pcfdemo rabbitmq
@@ -249,7 +251,7 @@ This will output the connection credentials to the service via variables in the 
 Let's go ahead and delete the app. to free up resources.
 
 ```
-cf delete pcfdemo --f --r
+cf delete pcfdemo --f
 ```
 
 ### Summary

@@ -2,13 +2,20 @@
 
 ##Exercise 2: Push your application
 
-Ensure that you are in sub-directory `ex2`.
+Make sure you ran the following command already.
+
+```
+git clone https://github.com/ragsns/CFContainersHOL
+```
+If you do not have the `git` command line tool, you can just click on the button `Download ZIP` from the URL `https://github.com/ragsns/CFContainersHOL` to download locally.
+
+Next, ensure that you are in sub-directory `ex2`.
 
 ```
 cd <path-to-folder>/CFContainersHOL/ex2
 ```
 
-We will use the Pivotal Cloud Foundry field engineering [demo.](https://github.com/Pivotal-Field-Engineering/PCF-demo) that is also [locally available](../samples/PCF-demo). For your convenience, symbolic links are provided. However, you can use the [samples directory](../samples/PCF-demo) to do the same.
+We will use the Pivotal Cloud Foundry field engineering [demo](https://github.com/Pivotal-Field-Engineering/PCF-demo).
 
 Push the application with the following command.
 
@@ -102,13 +109,13 @@ If you browse the URL from the output above you should be able to see a heat map
 You can get the application logs with the following command. We will subsequently connect to a log provider such as papertrail or splunk.
 
 ```
-cf logs pcfdemo
+cf logs pcfdemo --recent
 ```
 
 You can delete the application with the following command, which will not prompt you and also delete all associated routes.
 
 ```
-cf delete --f --r pcfdemo
+cf delete --f pcfdemo
 ```
 
 and verify that it is deleted as below.

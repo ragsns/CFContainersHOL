@@ -2,19 +2,29 @@
 
 ##Exercise 3c: Containerize the Application
 
-Ensure that you are in sub-directory `ex3b`.
+Ensure that you are in sub-directory `ex3c`.
 
 ```
-cd <path-to-folder>/CFContainersHOL/ex3b
+cd <path-to-folder>/CFContainersHOL/ex3c
 ```
 
-Also make sure you're logged into IBM Containers and you have the environment variable `CONTAINER_NAMESPACE` instantiated.
+Also make sure you're logged into IBM Containers and you have the environment variable `CONTAINER_NAMESPACE` instantiated. We will use this variable primarily as a unique value to avoid namespace clashes.
+
+***Note: If you are running on Windows, you may need to carefully look at subseqent commands and substitute the environment variable `CONTAINER_NAMESPACE` in each command manually***
+
+You can rerun the following command if required.
+
+```
+export CONTAINER_NAMESPACE=$(cf ic namespace get)
+```
+
+Now run the following command
 
 ```
 echo $CONTAINER_NAMESPACE
 ```
 
-If the output is blank, you need to export the environment variable `CONTAINER_NAMESPACE` as indicated in [exercise 1](../ex1).
+If the output is blank, you need to go back to exercise 1.
 
 Notice the `Dockerfile` in this directory. Its contents looks something like below.
 
@@ -30,7 +40,7 @@ CMD ["catalina.sh", "run"]
 
 We start with a base tomcat image, deploy the application, instantiate the container and start it. Pretty straightforward!
 
-Let's build the container with the following command.
+Let's build the container with the following command. This might take a ***long time*** depending on the network connection.
 
 ```
 cf ic build -t $CONTAINER_NAMESPACE/pcfdemo .
@@ -117,7 +127,13 @@ Maximum container instances: 1
 Desired container instances: 1
 ```
 
-Issue the following command to get the status of the container group. Eventually, the status of the group will change to `CREATE_COMPLETE` as shown below.
+Issue the following command
+
+```
+cf ic inspect pcfdemo
+```
+
+This will output the status of the container group as below. Eventually, the status of the group will change to `CREATE_COMPLETE` as shown below.
 
 ```
 {
@@ -162,7 +178,7 @@ Issue the following command to get the status of the container group. Eventually
 }
 ```
 
-Now browse the URL as shown above which should be `pcdemo-$CONTAINER_NAMESPACE.mybluemix.net` with the `CONTAINER_NAMESPACE` substituted and you should see the application deployed in a container.
+Now browse the URL as shown above which should be `pcfdemo-$CONTAINER_NAMESPACE.mybluemix.net` with the `CONTAINER_NAMESPACE` substituted and you should see the application deployed in a container.
 
 Notice the message `No RabbitMQ service bound - streaming is not active`. We will do that later.
 

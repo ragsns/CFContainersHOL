@@ -28,6 +28,12 @@ After a while (**it may take a few minutes**) the application will be restarted 
 Instance hosted at  10.254.2.34:61134
 ```
 
+Run the following command
+
+```
+cf logs --recent
+```
+
 ### Summary
 
 Just like that, with absolutely nothing required to be done by the application developer we see how health monitoring and restart of the application is being handled by the platform.

@@ -21,7 +21,7 @@ Desired container instances: 2
 Running the following command repeatedly should show that the load is balanced automatically by a load balancer that front ends the instances created. In this case, it will cycle between the two instances.
 
 ```
-curl http://pcfdemo-ragsns.mybluemix.net | grep -i instance
+curl http://pcfdemo-$CONTAINER_NAMESPACE.mybluemix.net | grep -i instance
 ```
 
 You should see an output that looks something like below.

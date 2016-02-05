@@ -2,10 +2,10 @@
 
 ##Exercise 4c: Connect a Cloud Foundry Service to a Container
 
-Ensure that you are in sub-directory `ex4b`.
+Ensure that you are in sub-directory `ex4c`.
 
 ```
-cd <path-to-folder>/CFContainersHOL/ex4b
+cd <path-to-folder>/CFContainersHOL/ex4c
 ```
 
 Ensure that the `myrabbit` service has been created by running the following command.

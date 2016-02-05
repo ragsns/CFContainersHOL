@@ -49,7 +49,7 @@ Will yield a single instance since the other instance has been killed.
 Instance hosted at &nbsp;172.30.1.1:8080
 ```
 
-Eventually the second instance will be restarted. Running the following command.
+Eventually the second instance will be restarted after a while (**it may take a few minutes**). Running the following command.
 
 ```
 cf ic ps -a

@@ -2,8 +2,7 @@
 
 Make sure you've met the prerequisites.
 
-**Prerequisite 1**: Install [Git](http://git-scm.com/downloads) (or "brew install git").
-
+**Prerequisite 1**: Install [Git](http://git-scm.com/downloads) (or "brew install git"). You can by without any knowledge of git but the command will be useful to host the repository locally and to be able to generate PRs (Pull Requests).
 
 **Prerequisite 2**: Registered for a Bluemix account that is **still current** (trial Bluemix accounts are available at <http://console.ng.bluemix.net>). Contact the instructor for a promotion code for a bump in the quota. Please note down the `username` (or `email`) and `password` which will be used to login via the `cf` CLI.
 
@@ -172,14 +171,24 @@ cf ic ps -a
 
 Which will list all the instances.
 
-We will export the namespace into an environment variable that we will subsequently use as below.
+We will export the namespace into an environment variable that we will subsequently use in other exercises following.
 
 ```
 CONTAINER_NAMESPACE = $(cf is namespace get)
 ```
 
+***Note: If you are running on Windows, you may need to carefully look at subseqent commands and substitute the environment variable `CONTAINER_NAMESPACE` in each command manually***
 
-#Summary
+###Git clone the content locally
+
+You will need the contents of this repository locally. Run the following command.
+
+```
+git clone https://github.com/ragsns/CFContainersHOL
+```
+If you do not have the `git` command line tool, you can just click on the button `Download ZIP` from the URL `https://github.com/ragsns/CFContainersHOL` to download locally.
+
+###Summary
 
 We targeted the Cloud Foundry instance and IBM Containers running Docker.
 

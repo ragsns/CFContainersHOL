@@ -4,7 +4,9 @@
 
 Scaling an application is relatively straightforward. However, it's really upto the application to exploit *scale out* by effectively using the multiple instances. A Queueing application for instance can *scale out* by adding more workers.
 
-First, let's scale down the application to 1 instance (if there are multiple instances) by using the following command.
+Let's redeploy the application as we did in exercise 4 and not delete it (yet).
+
+Next, let's scale down the application to 1 instance (if there are multiple instances) by using the following command.
 
 ```
 cf scale -i=1 pcfdemo
