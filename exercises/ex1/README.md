@@ -15,15 +15,19 @@ Make sure you've met the prerequisites.
 ##Exercise 1: Target the IBM Bluemix Cloud Foundry instance
 
 
-Target the Bluemix Cloud Foundry instance by substituting the URL with the one provided and use the following command. 
+Target the Bluemix Cloud Foundry instance by substituting the URL with the one provided and use the following command.
+
+To target the Cloud Foundry **Americas** instances use the following command.
 
 ```
-cf api https://api.ng.bluemix.net # to Americas
+cf api https://api.ng.bluemix.net
 ```
 **OR**
 
+To target the Cloud Foundry **Europe instances** use the following command.
+
 ```
-cf api https://api.eu-gb.bluemix.net # to Europe
+cf api https://api.eu-gb.bluemix.net
 ```
 
 
