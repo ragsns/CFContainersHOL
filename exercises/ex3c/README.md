@@ -130,7 +130,7 @@ Desired container instances: 1
 Issue the following command
 
 ```
-cf ic inspect pcfdemo
+cf ic group inspect pcfdemo
 ```
 
 This will output the status of the container group as below. Eventually, the status of the group will change to `CREATE_COMPLETE` as shown below.
